@@ -1,8 +1,8 @@
 ---
 description: >-
-  Ici, il y aura toutes les commandes que nous avons pu utiliser pour configurer
-  le NAT et les différentes règles pour sortir et proteger le réseau.
+  Vous verrez dans ce site tous les projets et Docs que j'ai pu rédiger pendant
+  ma formation.
 ---
 
-# iptables
+# Mon Portfolio
 
