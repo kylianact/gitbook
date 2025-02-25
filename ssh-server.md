@@ -4,6 +4,14 @@ description: Configuration du ssh coté server automatiser.
 
 # ssh-server
 
+Avant l'execution de ce code en mode root, il faut faire un : &#x20;
+
+<mark style="color:green;">`ssh-keygen -t rsa -b 4096`</mark>
+
+Copier la clé public lorsque le code est en execution, il vous la demandera.&#x20;
+
+<mark style="color:green;">`cat /home/"user"/.ssh/id_rsa.pub`</mark>
+
 ```bash
 #!/bin/bash
 

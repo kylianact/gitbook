@@ -9,4 +9,5 @@
 ***
 
 * [ssh-server](ssh-server.md)
-* [DNS/Proxy/reverseProxy](dns-proxy-reverseproxy.md)
+* [Configuration Réseaux](configuration-reseaux/README.md)
+  * [DNS/Proxy/reverseProxy](configuration-reseaux/dns-proxy-reverseproxy.md)
