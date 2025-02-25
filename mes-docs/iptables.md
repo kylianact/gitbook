@@ -17,9 +17,16 @@ layout:
 
 # iptables
 
-{% code fullWidth="false" %}
-```python
-print("hello wordl")
-```
-{% endcode %}
+Pour sauvegarder les règles iptables :&#x20;
 
+<mark style="color:green;">`sudo -s`</mark>
+
+<mark style="color:green;">`apt install iptables-persistent -y`</mark>
+
+\<oui>
+
+\<oui>
+
+<mark style="color:green;">`netfilter-persistent save`</mark>
+
+<mark style="color:green;">`netfilter-persistent reload`</mark>
