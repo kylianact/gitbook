@@ -1,10 +1,12 @@
 ---
-description: Configuration du ssh coté server automatiser.
+description: >-
+  Configuration du ssh coté server automatisé avec utilisation forcé d'une clé
+  publique.
 ---
 
 # ssh-server
 
-Avant l'execution de ce code en mode root, il faut faire un : &#x20;
+Avant l'execution de ce code en mode **root**, il faut faire un : &#x20;
 
 <mark style="color:green;">`ssh-keygen -t rsa -b 4096`</mark>
 
