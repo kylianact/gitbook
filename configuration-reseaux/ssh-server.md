@@ -49,7 +49,7 @@ touch "$AUTHORIZED_KEYS"
 chmod 600 "$AUTHORIZED_KEYS"
 
 echo "[+] Veuillez copier la clé publique dans $AUTHORIZED_KEYS"
-read -p "Collez la clé publique ici : " KEY
+read -r -p "Collez la clé publique ici : " KEY
 echo "$KEY" >> "$AUTHORIZED_KEYS"
 
 chown -R "$USER_ADMIN":"$USER_ADMIN" "$SSH_DIR"
@@ -78,3 +78,7 @@ echo "[✓] Configuration terminée ! Vous pouvez maintenant vous connecter avec
 echo "ssh $USER_ADMIN@<IP_DU_SERVEUR>"
 ```
 {% endcode %}
+
+Sur le PC admin pour eviter d'utiliser la passphrase a chaque connexion, vous pouvez stocker la clé temporairement en memoire avec ces 2 commandes :&#x20;
+
+<mark style="color:green;">`eval "$(ssh-agent -s)"`</mark>\ <mark style="color:green;">`ssh-add ~/.ssh/id_rsa`</mark>
