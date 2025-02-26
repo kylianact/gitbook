@@ -14,6 +14,11 @@ Copier la clé public lorsque le code est en execution, il vous la demandera.&#x
 
 <mark style="color:green;">`cat /home/"user"/.ssh/id_rsa.pub`</mark>
 
+Bien verifier qu'il a le droit d'etre executer :&#x20;
+
+<mark style="color:green;">`chmod +x <nom_du_fichier>.sh`</mark>
+
+{% code lineNumbers="true" %}
 ```bash
 #!/bin/bash
 
@@ -71,5 +76,5 @@ systemctl restart ssh
 
 echo "[✓] Configuration terminée ! Vous pouvez maintenant vous connecter avec :"
 echo "ssh $USER_ADMIN@<IP_DU_SERVEUR>"
-
 ```
+{% endcode %}
