@@ -1,8 +1,8 @@
 ---
-description: Configuration d'un serveur DNS Proxy reverseProxy
+description: Configuration d'un serveur DNS Reverse-Proxy avec Bind9.
 ---
 
-# DNS/Proxy/reverseProxy
+# DNS/Reverse-Proxy
 
 **Configuration Serveur WEB apache2 en 192.168.50.3/29 :**&#x20;
 
