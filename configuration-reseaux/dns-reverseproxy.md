@@ -16,13 +16,15 @@ _<mark style="color:purple;">allez sur Firefox et tapez :</mark> <mark style="co
 
 
 
-**Configuration du dns/proxy :**&#x20;
+**Installation du DNS :**&#x20;
 
 <mark style="color:green;">`sudo apt update && sudo apt install bind9 -y`</mark>
 
 <mark style="color:green;">`sudo systemctl start bind9`</mark>
 
 <mark style="color:green;">`sudo systemctl status bind9`</mark>
+
+**Configuration du DNS :**&#x20;
 
 <mark style="color:green;">`sudo nano /etc/bind/named.conf.options`</mark>
 
@@ -50,6 +52,8 @@ options {
 };
 ```
 
+&#x20;**Activation des modifications :**&#x20;
+
 <mark style="color:green;">`sudo systemctl restart bind9`</mark>
 
 <mark style="color:green;">`sudo systemctl status bind9`</mark>
@@ -70,7 +74,7 @@ Configuration du REVERSE Proxy :&#x20;
 
 _<mark style="color:red;">**ATTENTION ce nom de domaine est deja pris et donc ne fonctionne pas.**</mark>_&#x20;
 
-_<mark style="color:red;">**Meme avec un autre nom de domaine la configuration ne fonctionne pas**</mark>_&#x20;
+_<mark style="color:red;">**Meme avec un autre nom de domaine la configuration ne fonctionne pas...**</mark>_
 
 <mark style="color:green;">`sudo nano /etc/bind/db.kylian.com`</mark>
 
