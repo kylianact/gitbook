@@ -68,6 +68,10 @@ options {
 \
 Configuration du REVERSE Proxy :&#x20;
 
+_<mark style="color:red;">**ATTENTION ce nom de domaine est deja pris et donc ne fonctionne pas.**</mark>_&#x20;
+
+_<mark style="color:red;">**Meme avec un autre nom de domaine la configuration ne fonctionne pas**</mark>_&#x20;
+
 <mark style="color:green;">`sudo nano /etc/bind/db.kylian.com`</mark>
 
 ```

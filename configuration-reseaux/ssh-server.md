@@ -23,7 +23,7 @@ Bien verifier qu'il a le droit d'etre executer :&#x20;
 #!/bin/bash
 
 # Variables
-USER_ADMIN="supervisor"  # Remplacez par l'utilisateur supervisor
+USER_ADMIN="supervisor"  # Remplacer par l'utilisateur supervisor
 SSH_DIR="/home/$USER_ADMIN/.ssh"
 AUTHORIZED_KEYS="$SSH_DIR/authorized_keys"
 SSH_CONFIG="/etc/ssh/sshd_config"

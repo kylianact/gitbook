@@ -1,7 +1,5 @@
 ---
-description: >-
-  Dans cette partie nous verrons la configuration des différentes machines
-  réseaux.
+description: Dans cette partie nous verrons la configuration de l'infrastructure de
 coverY: 0
 layout:
   cover:
@@ -80,7 +78,7 @@ Le Zyxel utilise le DHCP Relay qui utilise la plage d'adresse IP du serveur DHCP
 
 ### Problèmes Rencontrés et Résolutions
 
-#### Problème avec "apt update"
+#### - Problème avec "apt update"
 
 Lors de la configuration du proxy pour accéder au cache de l'IUT, une anomalie empêchait le bon fonctionnement des mises à jour via apt update. Le problème venait du fait que le proxy ne redirigeait pas exclusivement les requêtes vers le serveur de cache (cache.univ-pau.fr). Au lieu de cela, il tentait également de récupérer des paquets depuis d'autres serveurs, ce qui entraînait des échecs de téléchargement et empêchait la mise à jour correcte des paquets. Le Pfsense bloqué les sortie provenant de la DMZ.
 
@@ -88,7 +86,7 @@ Lors de la configuration du proxy pour accéder au cache de l'IUT, une anomalie 
 
 Pour corriger ce problème, il a été nécessaire de configurer le proxy de manière à forcer le passage unique par le serveur "cache.univ-pau.fr" (en 194.167.156.15). Cela a été réalisé en ajustant les paramètres du proxy dans le fichier "/etc/squid/squid.conf" afin qu'il ne cherche plus à contacter d'autres serveurs externes pour récupérer les paquets. Après cette correction, apt update a pu s'exécuter correctement, garantissant ainsi un accès fiable aux mises à jour des paquets via le cache de l'université.
 
-#### Problème NTP et Syslog
+#### - Problème NTP et Syslog
 
 Le problème est survenu lorsque les équipements de la DMZ ne pouvaient pas envoyer leurs requêtes NTP et Syslog vers le VLAN Serveur. Le serveur NTP et Syslog étant situés dans le VLAN Serveur, les équipements de la DMZ ne parvenaient pas à les atteindre en raison de l'absence d'une route adéquate sur le PfSense de gauche. Cette absence de route empêchait le trafic NTP et Syslog de transiter correctement entre la DMZ et le VLAN Serveur.
 
@@ -96,7 +94,7 @@ Le problème est survenu lorsque les équipements de la DMZ ne pouvaient pas env
 
 Pour résoudre ce problème, j'ai ajouté la route manquante sur le PfSense de gauche pour permettre au trafic NTP et Syslog provenant de la DMZ de rejoindre le VLAN Serveur. J'ai aussi vérifié les règles de pare-feu pour m'assurer que ces services étaient autorisés à passer entre la DMZ et le VLAN Serveur. Une fois la route correctement configurée, les équipements de la DMZ ont pu envoyer leurs requêtes NTP et Syslog vers les serveurs situés dans le VLAN Serveur.
 
-#### Problème de ports physiques
+#### - Problème de ports physiques
 
 Nous avons rencontré un problème initialement lié au manque de ports physiques disponibles sur la machine pour connecter les VLANs Technicien et Commercial. Ce manque de ports à empêché la configuration correcte des VLANs.
 
@@ -104,7 +102,7 @@ Nous avons rencontré un problème initialement lié au manque de ports physique
 
 Pour résoudre ce problème, nous avons créé des VSwitchs (commutateurs virtuels) sur le Pfsense de droite, permettant de simuler des interfaces réseau pour les VLANs Technicien et Commercial. Cela a permis de continuer la configuration sans nécessiter de ports physiques supplémentaires.
 
-#### Problème de connexion réseau
+#### - Problème de connexion réseau
 
 L'un de nos PC avait des problèmes de connexion avec le réseau de l'IUT et l'hyperviseur. Il ne parvenait pas à booter correctement, et après vérification, le port réseau était défectueux.
 
@@ -112,7 +110,7 @@ L'un de nos PC avait des problèmes de connexion avec le réseau de l'IUT et l'h
 
 Après avoir contacté un administrateur réseau, nous avons constaté que le port était cassé. Ce problème nous a fait perdre beaucoup de temps sur le projet. En attendant une solution, nous avons limité le passage des gens près de la fenêtre, car ils marchaient sur le câble et coupaient la connexion.
 
-#### Problème de route externe
+#### - Problème de route externe
 
 Les VMs ne pouvaient pas accéder à Internet malgré des règles de filtrage ouvertes. Le routeur externe redirigeait mal les requêtes, créant une boucle et bloquant la connexion. &#x20;
 
@@ -120,7 +118,7 @@ Les VMs ne pouvaient pas accéder à Internet malgré des règles de filtrage ou
 
 En débranchant temporairement le routeur externe, la connexion a été rétablie via pfSense. Le problème venait probablement d'une mauvaise configuration des routes de sortie, nécessitant une correction de la table de routage. &#x20;
 
-#### Problème d'accès serveur web
+#### - Problème d'accès serveur web
 
 Le serveur web était accessible uniquement depuis la DMZ et sans proxy. Avec le proxy activé, une erreur empêchait son fonctionnement, probablement due à un mauvais acheminement DNS et une mauvaise configuration du proxy. &#x20;
 

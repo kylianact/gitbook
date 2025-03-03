@@ -13,4 +13,3 @@
   * [DNS/ReverseProxy](configuration-reseaux/dns-reverseproxy.md)
   * [ssh-server](configuration-reseaux/ssh-server.md)
   * [Proxy](configuration-reseaux/proxy.md)
-  * [Proxy](configuration-reseaux/proxy-1.md)
