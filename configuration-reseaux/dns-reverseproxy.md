@@ -12,7 +12,7 @@ description: Configuration d'un serveur DNS ReverseProxy avec Bind9.
 
 <mark style="color:green;">`sudo systemctl start apache2`</mark>
 
-_<mark style="color:purple;">allez sur Firefox et mettre :</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**http://127.0.0.1/**</mark>_
+_<mark style="color:purple;">allez sur Firefox et tapez :</mark> <mark style="color:purple;"></mark><mark style="color:purple;">**http://127.0.0.1/**</mark>_
 
 
 
