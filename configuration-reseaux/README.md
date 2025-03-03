@@ -45,8 +45,7 @@ Nous avons décidé de segmenter notre réseau, en deux parties distinctes physi
 
 #### DNS
 
-Le DNS (192.168.50.2) utilise bind9 et est utilisé pour toute l'infrastructure du réseau et permet de rediriger toutes les requêtes DNS (53) du réseau vers le DNS de l'IUT en 194.167.156.13. Cela permet un contrôle des requêtes DNS et de voir ce qui est transmis vers le DNS externe.\
-
+Le DNS (192.168.50.2) utilise bind9 et est utilisé pour toute l'infrastructure du réseau et permet de rediriger toutes les requêtes DNS (53) du réseau vers le DNS de l'IUT en 194.167.156.13. Cela permet un contrôle des requêtes DNS et de voir ce qui est transmis vers le DNS externe.
 
 #### Proxy
 
