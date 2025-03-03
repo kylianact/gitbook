@@ -10,6 +10,7 @@
 ***
 
 * [Configuration Réseaux](configuration-reseaux/README.md)
-  * [DNS/Reverse-Proxy](configuration-reseaux/dns-reverse-proxy.md)
+  * [DNS/ReverseProxy](configuration-reseaux/dns-reverseproxy.md)
   * [ssh-server](configuration-reseaux/ssh-server.md)
   * [Proxy](configuration-reseaux/proxy.md)
+  * [Proxy](configuration-reseaux/proxy-1.md)
