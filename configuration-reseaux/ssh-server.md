@@ -79,6 +79,6 @@ echo "ssh $USER_ADMIN@<IP_DU_SERVEUR>"
 ```
 {% endcode %}
 
-Sur le PC admin pour eviter d'utiliser la passphrase a chaque connexion, vous pouvez stocker la clé temporairement en memoire avec ces 2 commandes :&#x20;
+Sur le PC admin pour eviter d'utiliser la passphrase a chaque connexion, vous pouvez stocker la clé **temporairement** en memoire avec ces 2 commandes :&#x20;
 
 <mark style="color:green;">`eval "$(ssh-agent -s)"`</mark>\ <mark style="color:green;">`ssh-add ~/.ssh/id_rsa`</mark>

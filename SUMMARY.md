@@ -11,5 +11,6 @@
 
 * [Configuration Réseaux](configuration-reseaux/README.md)
   * [DNS/ReverseProxy](configuration-reseaux/dns-reverseproxy.md)
-  * [ssh-server](configuration-reseaux/ssh-server.md)
   * [Proxy](configuration-reseaux/proxy.md)
+  * [ssh-server](configuration-reseaux/ssh-server.md)
+  * [NTP](configuration-reseaux/ntp.md)
