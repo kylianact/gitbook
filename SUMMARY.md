@@ -14,3 +14,4 @@
   * [Proxy](configuration-reseaux/proxy.md)
   * [ssh-server](configuration-reseaux/ssh-server.md)
   * [NTP](configuration-reseaux/ntp.md)
+  * [Log](configuration-reseaux/log.md)
