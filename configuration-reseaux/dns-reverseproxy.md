@@ -28,7 +28,7 @@ _<mark style="color:purple;">allez sur Firefox et tapez :</mark> <mark style="co
 
 <mark style="color:green;">`sudo nano /etc/bind/named.conf.options`</mark>
 
-```clike
+```c
 options {
     directory "/var/cache/bind";
     
@@ -47,7 +47,7 @@ options {
     # Active le cache DNS
     dnssec-validation auto;
     
-    # Écoute sur toutes les interfaces
+    # Ecoute sur toutes les interfaces
     listen-on { any; };
 };
 ```
@@ -78,7 +78,7 @@ _<mark style="color:red;">**Meme avec un autre nom de domaine la configuration n
 
 <mark style="color:green;">`sudo nano /etc/bind/db.kylian.com`</mark>
 
-```
+```c
 $TTL 86400
 @   IN  SOA  ns1.kylian.com. root.kylian.com. (
      20240220  ; Serial (mets à jour à chaque modif)

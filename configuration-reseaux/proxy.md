@@ -4,11 +4,13 @@ description: Configuration d'un serveur Proxy avec squid.
 
 # Proxy
 
-**Installation :**&#x20;
+## **Configuration Proxy**
+
+### **Installation :**&#x20;
 
 <mark style="color:green;">`sudo apt update && sudo apt install squid -y`</mark>
 
-**Configuration :**&#x20;
+### **Configuration :**&#x20;
 
 <mark style="color:green;">`sudo nano /etc/squid/squid.conf`</mark>
 
@@ -56,8 +58,40 @@ cache_dir ufs /var/spool/squid 1000 16 256
 * <mark style="color:green;">**`http_access deny all`**</mark>\
   → Bloque tout le trafic qui ne correspond pas aux règles autorisées.
 
-Activation des modifications :&#x20;
+### **Activation des modifications :**&#x20;
 
 <mark style="color:green;">`sudo systemctl restart squid`</mark>
 
 <mark style="color:green;">`sudo systemctl status squid`</mark>
+
+
+
+## **Configuration du DNS :**&#x20;
+
+### **Configuration de la zone**
+
+<mark style="color:green;">`sudo nano /etc/bind/named.conf.local`</mark>
+
+```c
+zone "proxy.local" {
+    type master;
+    file "/etc/bind/db.proxy";
+};
+```
+
+<mark style="color:green;">`sudo nano /etc/bind/db.proxy`</mark>
+
+```c
+$TTL 604800
+@   IN  SOA proxy.local. root.proxy.local. (
+                           2     ; Serial
+                      604800     ; Refresh
+                       86400     ; Retry
+                     2419200     ; Expire
+                      604800 )   ; Negative Cache TTL
+;
+@   IN  NS  proxy.local.
+@   IN  A   192.168.50.4  ; Adresse du serveur Proxy
+```
+
+<mark style="color:green;">`sudo netstat -tulnp | grep named`</mark>
