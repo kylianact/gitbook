@@ -1,10 +1,14 @@
 ---
-description: Dans cette partie nous verrons la configuration de l'infrastructure de
+description: >-
+  Dans cette partie nous verrons la configuration de l'infrastructure de notre
+  Projet.
+cover: >-
+  https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHw2fHxjeWJlcnxlbnwwfHx8fDE3NDEwNDk4Njl8MA&ixlib=rb-4.0.3&q=85
 coverY: 0
 layout:
   cover:
     visible: true
-    size: hero
+    size: full
   title:
     visible: true
   description:
