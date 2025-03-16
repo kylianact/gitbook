@@ -1,3 +1,10 @@
+---
+description: >-
+  Ce script utilise la librairie scapy, elle scan les différentes adresses MAC
+  des machines connectés sur le réseau et détermine quel OS est utilisé par
+  rapport à celle-ci.
+---
+
 # Scan de l'OS pour téléphone
 
 ```python
@@ -47,6 +54,6 @@ def detect_devices():
 
 if __name__ == "__main__":
     detect_devices()
-
-
 ```
+
+Bien sur, Ici, nous pouvons pousser encore plus loin le processus d'analyse en utilisant des BDD de préfix d'adresse MAC pour chaque OS de téléphone car en effet, les téléphones de nos jours utilisent des préfix privés (adresse WIFI privé) qui permet de changer à chaque connexion d'adresse WIFI et donc de freiner les hackeurs qui veulent analyser les OS des téléphones qui se connectent au réseau WIFI.
