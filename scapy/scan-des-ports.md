@@ -1,3 +1,10 @@
+---
+description: >-
+  Ce script utilise la librairie scapy, elle permet de scanner tout les ports
+  non éphémère d'une machine pour voir s'il utilise un protocole en particulier
+  (TCP, UDP, ICMP).
+---
+
 # Scan des ports
 
 ```python
@@ -48,18 +55,5 @@ def scan_ports(ip_visé):
 
 if __name__ == "__main__":
     scan_ports("192.168.1.1")  # Utilisez l'adresse IP cible ici
-    
-
-#172.20.10.41
-
-
-"""
-ping = Ether() / IP(dst="127.0.0.1") / TCP()
-ping.show()
-
-#Visualise les paquets ICMP emis et recus :   
-rep,non_rep = srp(ping)
-"""
-
 
 ```

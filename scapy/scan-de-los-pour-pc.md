@@ -1,6 +1,12 @@
+---
+description: >-
+  Ce script utilise la librairie scapy, elle permet de scanner l'OS que la
+  machine cible utilise (Linux, Windows, Cisco Router,...)
+---
+
 # Scan de l'OS pour PC
 
-```
+```python
 from scapy.all import *
 
 def identify_os(ip):
@@ -34,3 +40,5 @@ if __name__ == "__main__":
     os = identify_os(ip_address)
     print(f"The operating system is likely: {os}")
 ```
+
+Bien sur, les analyseurs d'OS de nos jours peuvent et doivent être bien plus pousser que cela mais voici déjà le principe de base de comment reconnaitre les signatures d'un OS en particulier.
