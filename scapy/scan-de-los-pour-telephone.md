@@ -7,6 +7,8 @@ description: >-
 
 # Scan de l'OS pour téléphone
 
+Ce programme doit obligatoirement être exécuté en tant qu'administrateur car il envoie des paquets BRUT directement vers le réseau et donc il doit y avoir les droits d'administrateur pour le faire.
+
 ```python
 from scapy.all import *
 import re
