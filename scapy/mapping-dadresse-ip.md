@@ -1,4 +1,13 @@
+---
+description: >-
+  Ce script utilise python avec scapy comme librairie et sert à analyser le
+  réseau souhaiter pour permettre de faire ressortir les machines actives de ce
+  réseau en particulier.
+---
+
 # Mapping d'adresse IP
+
+Ce programme doit obligatoirement être exécuté en tant qu'administrateur car il envoie des paquets BRUT directement vers le réseau et donc il doit y avoir les droits d'administrateur pour le faire.
 
 ```python
 from scapy.all import *
