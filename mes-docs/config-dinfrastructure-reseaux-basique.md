@@ -1,4 +1,6 @@
-# Config infrastructure réseaux basique
+# Config d'infrastructure réseaux basique
+
+<figure><img src="../.gitbook/assets/Capture d&#x27;écran 2025-09-05 154829.png" alt=""><figcaption></figcaption></figure>
 
 Routeur (Cisco IOS)
 
@@ -125,3 +127,62 @@ line vty 0 4
  access-class 20 in
 ```
 
+### Protection de l’accès au VLAN d’admin (222)
+
+(Seuls les postes du VLAN DGI doivent pouvoir joindre le VLAN 222.)
+
+```python
+ip access-list extended ACL_ADMIN_OUT
+ remark Autoriser UNIQUEMENT la DGI vers le VLAN 222
+ permit ip 192.168.20.0 0.0.0.255 192.168.222.0 0.0.0.255
+ deny   ip any               192.168.222.0 0.0.0.255
+ permit ip any any
+
+interface FastEthernet0/0.222
+ ip access-group ACL_ADMIN_OUT out
+```
+
+## Switches (exemple de gabarit)
+
+> Rappel des VLANs et ports par l'énoncé (VLAN 10/20/100/222, ports d’accès Fa0/1–Fa0/2 selon le switch, et ports trunk listés).&#x20;
+>
+> Adresse d’admin en VLAN 222 au format `192.168.222.X/24`, X correspondant au nom (Switch1 → .1, Switch10 → .10, etc.).
+
+Exemple :  Switch&#x20;
+
+```python
+hostname Switch10
+!
+vlan 10
+ name COMMERCIAL
+vlan 222
+ name ADMIN
+!
+interface range fa0/1 - 2
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+!
+! Ports trunk (adapter à ta maquette : fa0/24, g0/1, etc.)
+interface fa0/24
+ switchport mode trunk
+!
+interface g0/1
+ switchport mode trunk
+!
+! SVI d’admin
+interface vlan 222
+ ip address 192.168.222.10 255.255.255.0
+ no shutdown
+!
+ip default-gateway 192.168.222.254
+!
+! SSH (mêmes principes que sur le routeur)
+ip domain-name cyb509.rt
+crypto key generate rsa
+username admin privilege 15 secret Admin@123
+line vty 0 4
+ login local
+ transport input ssh
+
+```

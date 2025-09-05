@@ -6,7 +6,7 @@
 
 * [iptables](mes-docs/iptables.md)
 * [Commandes utiles](mes-docs/commandes-utiles.md)
-* [Config infrastructure réseaux basique](mes-docs/config-infrastructure-reseaux-basique.md)
+* [Config d'infrastructure réseaux basique](mes-docs/config-dinfrastructure-reseaux-basique.md)
 
 ***
 
