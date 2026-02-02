@@ -8,3 +8,9 @@ $ sudo brew services start tailscale
 $ sudo tailscale up
 $ sudo tailscale status
 ```
+
+## Installation de Tailscale depuis Debian
+
+```
+```
+
