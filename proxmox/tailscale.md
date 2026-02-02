@@ -26,5 +26,7 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ### Dans le LXC faire ces deux commandes shell :
 curl -fsSL https://tailscale.com/install.sh | sh
 systemctl start tailscaled
+tailscale up
+tailscale status
 ```
 
