@@ -25,6 +25,6 @@ lxc.mount.entry: /dev/net/tun dev/net/tun none bind,create=file
 ```shellscript
 ### Dans le LXC faire ces deux commandes shell :
 curl -fsSL https://tailscale.com/install.sh | sh
-systemctl start tailscale
+systemctl start tailscaled
 ```
 

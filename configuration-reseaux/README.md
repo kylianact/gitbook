@@ -13,8 +13,7 @@ coverY: 0
 
 ### Description de la SAE
 
-Cette SAE consiste à concevoir et configurer un réseau d'entreprise sécurisé, en utilisant du matériel réel ou virtuel, sans recourir à Packet Tracer. Il s'agit de monter une infrastructure réseau avec plusieurs services (WWW, DNS, TFTP, DHCP, NTP, SYSLOG) et de segmenter le réseau en VLANs (Commercial, Technique, Administration). Les équipements utilisés incluent des switches, des routeurs et des machines virtuelles pour gérer les services.\
-
+Cette SAE consiste à concevoir et configurer un réseau d'entreprise sécurisé, en utilisant du matériel réel ou virtuel, sans recourir à Packet Tracer. Il s'agit de monter une infrastructure réseau avec plusieurs services (WWW, DNS, TFTP, DHCP, NTP, SYSLOG) et de segmenter le réseau en VLANs (Commercial, Technique, Administration). Les équipements utilisés incluent des switches, des routeurs et des machines virtuelles pour gérer les services.<br>
 
 ### Objectif de la SAE
 
