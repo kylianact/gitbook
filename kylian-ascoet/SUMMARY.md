@@ -29,3 +29,8 @@
 
 * [Commandes utiles](mes-docs/commandes-utiles.md)
 * [iptables](mes-docs/iptables.md)
+
+***
+
+* [5. Verrouiller la configuration](5.-verrouiller-la-configuration.md)
+* [Accès web, Claude et exploitation](acces-web-claude-et-exploitation.md)
