@@ -32,5 +32,5 @@
 
 ***
 
-* [5. Verrouiller la configuration](5.-verrouiller-la-configuration.md)
+* [Installer et sécuriser OpenClaw sur un VPS](installer-et-securiser-openclaw-sur-un-vps.md)
 * [Accès web, Claude et exploitation](acces-web-claude-et-exploitation.md)
