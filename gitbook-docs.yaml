@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Kylian-Ascoet
+  structure:
+    - type: space
+      key: space-1
+      title: Kylian-Ascoet
+      path: kylian-ascoet
+      default: true
+      content:
+        directory: ./kylian-ascoet
+        language: fr
