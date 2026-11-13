@@ -1,0 +1,41 @@
+---
+description: >-
+  Ici, il y aura toutes les commandes que nous avons pu utiliser pour configurer
+  le NAT et les différentes règles pour sortir et proteger le réseau.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
+  anchors:
+    visible: true
+---
+
+# iptables
+
+Pour sauvegarder les règles iptables :&#x20;
+
+<mark style="color:green;">`sudo -s`</mark>
+
+<mark style="color:green;">`apt install iptables-persistent -y`</mark>
+
+\<oui>
+
+\<oui>
+
+<mark style="color:green;">`netfilter-persistent save`</mark>
+
+<mark style="color:green;">`netfilter-persistent reload`</mark>
